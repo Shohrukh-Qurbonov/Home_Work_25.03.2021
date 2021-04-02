@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    List<Person> persons = ViewBag.persons;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@foreach (var person in persons)
+{
+    <p>id = @person.id</p>
+    <p>firstName = @person.firstName</p>
+    <p>lastName = @person.lastName</p>
+    <p>middleName = @person.middleName</p>    
+}
